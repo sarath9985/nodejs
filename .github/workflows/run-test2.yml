@@ -1,12 +1,11 @@
-name: Node CI
+name: Node CI2
 
 on:
   push:
     branches:
       - master
     paths:
-      - hello-world/**
-
+      - hello-world2/**
 
 jobs:  
   build:
@@ -18,13 +17,7 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - name: Sparse checkout
-      run: |
-        git init static
-        git remote add origin https://github.com/sarath9985/nodejs.git
-        git config core.sparsecheckout true
-        echo "hello-world/*" >> .git/info/sparse-checkout
-        git pull --depth=1 origin master
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
