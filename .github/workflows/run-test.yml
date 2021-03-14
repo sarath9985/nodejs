@@ -21,5 +21,6 @@ jobs:
       run: |
         node -v
         ls -la
+        cd hello-world2
         npm install
         npm build
