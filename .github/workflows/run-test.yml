@@ -21,6 +21,7 @@ jobs:
     - name: Sparse checkout
       run: |
         git init static
+        cd static
         git remote add origin https://github.com/sarath9985/nodejs.git
         git config core.sparsecheckout true
         echo "hello-world/*" >> .git/info/sparse-checkout
