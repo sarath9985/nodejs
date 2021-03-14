@@ -35,6 +35,7 @@ jobs:
 
     - name: npm install, build, and test
       run: |
+        ls -la
         node -v
         cd hello-world
         npm install
