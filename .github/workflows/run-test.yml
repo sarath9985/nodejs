@@ -35,5 +35,5 @@ jobs:
     - name: npm install, build, and test
       run: |
         ls -la
-        echo "$PATH"
+        echo "$github.action_path"
 
