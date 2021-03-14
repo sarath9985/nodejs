@@ -25,14 +25,17 @@ jobs:
         git config core.sparsecheckout true
         echo "hello-world/*" >> .git/info/sparse-checkout
         git pull --depth=1 origin master
+        ls -la
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - name: npm install, build, and test
       run: |
         node -v
-        ls -la
-        cd hello-world2
+        cd hello-world
         npm install
         npm build
+        ls -la
