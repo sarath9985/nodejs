@@ -6,6 +6,8 @@ on:
       - master
     paths:
       - hello-world/**
+  repository_dispatch:
+    types: [backend_automation]      
 
 
 jobs:  
